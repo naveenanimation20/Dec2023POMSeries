@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Appenders>
+		<!-- Console appender -->
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d %p %C [%t] %m%n" />
+
+		</Console>
+
+		<!-- File appender with append="false" -->
+		<File name="File" fileName="logs/application.log" append="false">
+			<PatternLayout pattern="%d %p %C [%t] %m%n" />
+		</File>
+	</Appenders>
+
+	<Loggers>
+		<!-- Root logger -->
+		<Root level="debug">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="File" />
+		</Root>
+	</Loggers>
+</Configuration>
