@@ -28,6 +28,8 @@ public class RegisterationPage {
 
 	private By logoutLink = By.linkText("Logout");
 	private By registerLink = By.linkText("Register");
+	private By pop = By.linkText("pop");
+
 
 	public RegisterationPage(WebDriver driver) {
 		this.driver = driver;
