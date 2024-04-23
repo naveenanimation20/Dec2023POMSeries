@@ -9,5 +9,10 @@ public class Google {
 		System.out.println("done");
 
 	}
+	
+	
+	public void register() {
+		System.out.println("register");
+	}
 
 }
