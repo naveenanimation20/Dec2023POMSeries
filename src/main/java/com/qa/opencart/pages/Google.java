@@ -15,4 +15,9 @@ public class Google {
 		System.out.println("register");
 	}
 
+
+	public void forgotpwd() {
+		System.out.println("forgotpwd");
+	}
+
 }
