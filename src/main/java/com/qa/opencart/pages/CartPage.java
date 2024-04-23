@@ -6,7 +6,7 @@ public class CartPage {
 
 	int i = 10;
 
-	private By name = By.id("test");
+	private By name = By.id("testing");
 
 	public void getName() {
 		System.out.println("name");
