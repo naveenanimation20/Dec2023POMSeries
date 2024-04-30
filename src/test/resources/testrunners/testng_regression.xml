@@ -32,6 +32,13 @@
 			<class name="com.qa.opencart.tests.AccountsPageTest" />
 		</classes>
 	</test>
+	
+	<test name="ProductInfo Page Test">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.qa.opencart.tests.ProductPageInfoTest" />
+		</classes>
+	</test>
 
 	<!-- <test name="Reg Page Test">
 		<parameter name="browser" value="chrome" />
@@ -48,12 +55,7 @@
 		</classes>
 	</test>
 
-	<test name="ProductInfo Page Test">
-		<parameter name="browser" value="chrome" />
-		<classes>
-			<class name="com.qa.opencart.tests.ProductPageInfoTest" />
-		</classes>
-	</test> -->
+	 -->
 
 
 

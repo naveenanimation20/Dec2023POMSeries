@@ -26,6 +26,25 @@ pipeline
         }
         
         
+        stage("Deploy to DEV"){
+            steps{
+                echo("deploy to DEV")
+            }
+        }
+        
+        
+                
+        stage('Sanity Automation Tests on DEV') {
+            steps {
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                    git 'https://github.com/naveenanimation20/Dec2023POMSeries.git'
+                    sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_sanity.xml -Denv=dev"
+                    
+                }
+            }
+        }
+        
+        
         
         stage("Deploy to QA"){
             steps{
@@ -39,7 +58,7 @@ pipeline
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git 'https://github.com/naveenanimation20/Dec2023POMSeries.git'
-                    sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_regression.xml"
+                    sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_regression.xml -Denv=qa"
                     
                 }
             }
