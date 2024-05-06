@@ -105,6 +105,7 @@ private WebDriver driver;
 	/**
 	 * example: "document.body.style.zoom = '400.0%'"
 	 * @param zoomPercentage
+	 * valid for chrome/edge/safari
 	 */
 	public void zoomChromeEdgeSafari(String zoomPercentage) {
 		String zoom = "document.body.style.zoom = '"+zoomPercentage+"%'";
@@ -115,6 +116,7 @@ private WebDriver driver;
 	/**
 	 * example: "document.body.style.MozTransform = 'scale(0.5)'; ";
 	 * @param zoomPercentage
+	 * valid for firefox
 	 */
 	public void zoomFirefox(String zoomPercentage) {
 		String zoom = "document.body.style.MozTransform = 'scale("+zoomPercentage+")'";

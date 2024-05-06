@@ -35,11 +35,6 @@ public class ProductPageInfoTest extends BaseTest{
 	
 	
 	
-	
-	
-	
-	
-	
 	@Test(dataProvider = "getProductSearchData")
 	public void productHeaderTest(String searchKey, String productName) {
 		searchResultsPage = accPage.doSearch(searchKey);

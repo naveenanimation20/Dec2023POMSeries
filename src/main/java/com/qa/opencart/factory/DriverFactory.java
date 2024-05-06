@@ -142,7 +142,7 @@ public class DriverFactory {
 	public Properties initProp() {
 
 		// envName=qa,stage,prod,uat,dev
-		// mvn clean install -Denv="qa"
+		// mvn clean install -Denv="uat" -DsuiteXmlFiles="//"
 		FileInputStream ip = null;
 		prop = new Properties();
 
